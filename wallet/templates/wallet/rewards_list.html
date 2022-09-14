@@ -8,24 +8,21 @@
 
     <title>Document</title>
 </head>
-<body>
-    <div class="card" style="width: 50rem;">
-        <table>
-            <th>
-                <td>Account Name</td>
-                <td>Account Number</td>
-                <td> Balance </td>
-                <td>Account Pin</td>
-                <td> Currency</td>
-                </th >
-                {%for account in account%}
-                <tr>
-                    <td>{{notification.account name}</td>
-                    <td>{{notification.account_number}}</td>
-                    <td>{{notification.balance}}</td>
-                    <td>{{notification.account_pin}}</td>
-                    <td>{{notification.currency}}</td>
 
+<body style="background-color: rgb(188, 72, 91);">
+    <table class="table" style="height: 10rem;margin: 10px; width: 80%; position: fixed; margin-left: 9%; margin-top: 10%; border: 10px solid rgb(251, 250, 250); " >
+    
+                <td style="color: white; background-color: rgb(88, 132, 140);">Receipt </td>
+                <td style="color: white; background-color: rgb(83, 182, 74);">Transacation</td>
+                <td style="color: white; background-color: rgb(42, 44, 45);">Customer Id</td>
+                <td style="color: white; background-color: rgb(74, 166, 182);">Date Reward </td>
+                </th >
+                {%for reward in rewards%}
+                <tr>
+                    <td style="color: white; background-color: black;" >{{reward.receipt}}</td>
+                    <td style="color: white; background-color: black;" >{{reward.transacation}}</td>
+                    <td style="color: white; background-color: black;" >{{reward.customerid}}</td>
+                    <td style="color: white; background-color: black;" >{{reward.datereward}}</td>
 
                 </tr>
                 {%endfor%}

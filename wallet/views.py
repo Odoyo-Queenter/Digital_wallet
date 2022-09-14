@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Account, Card, Customer, Loan, Notification, Receipt, Reward, Transaction, Wallet
+from .models import Account, Card, Customer, Loan, Notification, Receipt, Reward, ThirdParty, Transaction, Wallet
 from . import forms
 from .forms import AccountRegistrationForm, CardRegistrationForm, CustomerRegistrationForm, LoanRegistrationForm, NotificationRegistrationForm, ReceiptRegistrationForm, RewardRegistrationForm, ThirdPartyRegistrationForm, TransactionRegistrationForm, WalletRegistrationForm
 
@@ -30,9 +30,9 @@ def register_account(request):
     return render(request,"wallet/register_account.html",{'form':form})
 
 
-def list_account(request):
-    account = Account.objects.all() 
-    return render(request,'wallet/account_list.html',{"account":account})      
+def list_accounts(request):
+    accounts = Account.objects.all() 
+    return render(request,'wallet/accounts_list.html',{"accounts":accounts})      
 
 
 def register_wallet(request):
@@ -46,9 +46,9 @@ def register_wallet(request):
     return render(request,"wallet/register_wallet.html",{'form':form}) 
 
 
-def list_wallet(request):
-    wallet = Wallet.objects.all() 
-    return render(request,'wallet/wallet_list.html',{"wallet":wallet})      
+def list_wallets(request):
+    wallets = Wallet.objects.all() 
+    return render(request,'wallet/wallets_list.html',{"wallets":wallets})      
 
 
 def register_transaction(request):
@@ -62,9 +62,9 @@ def register_transaction(request):
     return render(request,"wallet/register_transaction.html",{'form':form}) 
 
 
-def list_transaction(request):
-    transaction = Transaction.objects.all() 
-    return render(request,'wallet/transaction_list.html',{"transaction":transaction})      
+def list_transactions(request):
+    transactions = Transaction.objects.all() 
+    return render(request,'wallet/transactions_list.html',{"transactions":transactions})      
 
 
 def register_card(request):
@@ -78,9 +78,9 @@ def register_card(request):
     return render(request,"wallet/register_card.html",{'form':form})  
 
 
-def list_card(request):
-    card = Card.objects.all() 
-    return render(request,'wallet/card_list.html',{"card":card})      
+def list_cards(request):
+    cards = Card.objects.all() 
+    return render(request,'wallet/cards_list.html',{"cards":cards})      
 
 def register_thirdparty(request):
     if request.method =='POST':
@@ -93,9 +93,9 @@ def register_thirdparty(request):
     return render(request,"wallet/register_thirdparty.html",{'form':form}) 
 
 
-def list_thirdParty(request):
-    thirdParty= thirdParty.objects.all() 
-    return render(request,'wallet/thirdParty_list.html',{"thirdParty":thirdParty})     
+def list_thirdPartys(request):
+    thirdPartys= ThirdParty.objects.all() 
+    return render(request,'wallet/thirdPartys_list.html',{"thirdPartys":thirdPartys})     
 
 def register_receipt(request):
     if request.method =='POST':
@@ -105,11 +105,11 @@ def register_receipt(request):
     else:
         form = ReceiptRegistrationForm()        
     form = ReceiptRegistrationForm()
-    return render(request,"wallet/register_receipt.html",{'form':form})
+    return render(request,"wallet/receipt_register.html",{'form':form})
 
-def list_receipt(request):
-    receipt= Receipt.objects.all() 
-    return render(request,'wallet/receipt_list.html',{"receipt":receipt})     
+def list_receipts(request):
+    receipts= Receipt.objects.all() 
+    return render(request,'wallet/receipts_list.html',{"receipts":receipts})     
 
 
 def register_notification(request):
@@ -120,12 +120,12 @@ def register_notification(request):
     else:
         form = NotificationRegistrationForm()        
     form = NotificationRegistrationForm()
-    return render(request,"wallet/register_notification.html",{'form':form}) 
+    return render(request,"wallet/notification_register.html",{'form':form}) 
 
 
-def list_notification(request):
-    notification = Notification.objects.all() 
-    return render(request,'wallet/notification_list.html',{"notification":notification})      
+def list_notifications(request):
+    notifications = Notification.objects.all() 
+    return render(request,'wallet/notifications_list.html',{"notifications":notifications})      
 
 def register_loan(request):
     if request.method =='POST':
@@ -138,9 +138,9 @@ def register_loan(request):
     return render(request,"wallet/register_loan.html",{'form':form}) 
 
 
-def list_loan(request):
-    loan= Loan.objects.all() 
-    return render(request,'wallet/loan_list.html',{"loan":loan})     
+def list_loans(request):
+    loans= Loan.objects.all() 
+    return render(request,'wallet/loans_list.html',{"loans":loans})     
 
 
 def register_reward(request):
@@ -154,7 +154,7 @@ def register_reward(request):
     return render(request,"wallet/register_reward.html",{'form':form}) 
 
 
-def list_reward(request):
-    reward= Reward.objects.all() 
-    return render(request,'wallet/reward_list.html',{"reward":reward})    
+def list_rewards(request):
+    rewards= Reward.objects.all() 
+    return render(request,'wallet/rewards_list.html',{"rewards":rewards})    
 

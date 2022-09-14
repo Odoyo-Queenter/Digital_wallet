@@ -16,15 +16,15 @@ urlpatterns = [
     path("loan/",register_loan,name ="loan"),
     path("reward/",register_reward,name ="reward"),
     path("customers/",views.list_customers,name ="customers_list"),
-    path("notification/",views.list_notification,name = "notification_list"),
-    path("account/",views.list_account,name = "account_list"),
-    path("wallet/",views.list_wallet,name = "wallet_list"),
-    path("transaction",views.list_wallet,name = "trasaction_list"),
-    path("card",views.list_card,name = "card_list"),
-    path("thirdParty",views.list_thirdParty,name = "thirdParty_list"),
-    path("receipt",views.list_receipt,name = "receipt_list"),
-    path("loan",views.list_loan,name = "loan_list"),
-    path("reward",views.list_reward,name = "reward_list")
+    path("notifications/",views.list_notifications,name = "notifications_list"),
+    path("accounts/",views.list_accounts,name = "accounts_list"),
+    path("wallets/",views.list_wallets,name = "wallets_list"),
+    path("transactions",views.list_transactions,name = "trasactions_list"),
+    path("cards",views.list_cards,name = "cards_list"),
+    path("thirdPartys",views.list_thirdPartys,name = "thirdPartys_list"),
+    path("receipts",views.list_receipts,name = "receipts_list"),
+    path("loans",views.list_loans,name = "loans_list"),
+    path("rewards",views.list_rewards,name = "rewards_list")
 
 
 ]
