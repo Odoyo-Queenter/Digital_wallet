@@ -18,6 +18,8 @@
             <td style="color: white; background-color: rgb(88, 140, 99);"> Gender</td>
             <td style="color: white; background-color: rgb(76, 40, 7);">Email</td>
             <td style="color: white; background-color: rgb(150, 9, 178);">Age</td>
+            <td style="color: white; background-color: rgb(150, 9, 178);">View profile</td>
+
             </th >
             {%for customer in customers%}
             <tr>
@@ -28,6 +30,12 @@
                 <td  style="color: white; background-color: black;" >{{customer.gender}}</td>
                 <td  style="color: white; background-color: black;" >{{customer.email}}</td>
                 <td  style="color: white; background-color: black;" >{{customer.age}}</td>
+                <td  style="color: white; background-color: black;" >{{customer.view_profile}}</td>
+                <td><a href="{%url 'customers_profile' id=customer.id%}">Profile</a></td>
+
+
+
+
 
 
 
@@ -41,7 +49,7 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> 
 </body>
 </html>
-
+  
 
 
 

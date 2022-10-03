@@ -26,6 +26,8 @@
                     <td style="color: white; background-color: black;" >{{receipt.totalamount}}</td>
                     <td style="color: white; background-color: black;" >{{receipt.transaction}}</td>
                     <td style="color: white; background-color: black;" >{{receipt.receiptfile}}</td>
+                    <td><a href="{%url 'receipt_profile' id=receipt.id%}">Profile</a></td>
+
                 </tr>
                 {%endfor%}
             </table>

@@ -27,6 +27,8 @@
                     <td style="color: white; background-color: black;" >{{transaction.dateandtime }}</td>
                     <td style="color: white; background-color: black;" >{{transaction.originaccount}}</td>
                     <td style="color: white; background-color: black;" >{{transaction.destinationaccount}}</td>
+                    <td><a href="{%url 'transaction_profile' id=transaction.id%}">Profile</a></td>
+
 
                 </tr>
                 {%endfor%}
